@@ -1,0 +1,1 @@
+﻿This font was downloaded from https://fontsgeek.com/fonts/Lucida-Regular.
