@@ -1,30 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class dialogueNode : MonoBehaviour
+public class DialogueNode
 {
-    string[] lines;
-    dialogueNode[] next;
+    string text;
+    List<DialogueNode> next;
+    Text txtbox;
 
-    int currentLine;
+    Sprite speaker;
 
-    dialogueNode(string[] lines, dialogueNode[] next)
+    public DialogueNode(string text, Text txtbox)
     {
-        this.lines = lines;
-        this.next = next;
-        currentLine = 0;
+        this.text = text;
+        this.txtbox = txtbox;
+        this.next = new List<DialogueNode>();
+        this.speaker = null;
+    }
+
+    public DialogueNode(string text, Text txtbox, Sprite sprite)
+    {
+        this.text = text;
+        this.txtbox = txtbox;
+        this.next = new List<DialogueNode>();
+        this.speaker = sprite;
     }
 
     // Start is called before the first frame update
-    void Start()
+    public void Draw()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        txtbox.text = next.Count.ToString();
     }
 }
