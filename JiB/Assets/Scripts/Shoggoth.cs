@@ -8,6 +8,8 @@ public class Shoggoth : Creature
 
     private void Awake()
     {
+        this.Name = "Shoggoth";
+        this.form = Form.normal;
         this.maxHP = 100;
         this.Dfn = 5;
         this.Atk = 20;

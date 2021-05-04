@@ -8,7 +8,7 @@ public class ScriptedBattle : MonoBehaviour
 
     Shoggoth shoggoth;
 
-    int turn;
+    public int turn;
     // Start is called before the first frame update
     private void Start()
     {
@@ -27,6 +27,24 @@ public class ScriptedBattle : MonoBehaviour
             shoggoth.skills[0].DoCombat(shoggoth, justice);
             turn++;
         }
+    }
+
+    public void Attack()
+    {
+        justice.skills[0].DoCombat(justice, shoggoth);
+        this.turn++;
+    }
+
+    public void Skill()
+    {
+        justice.skills[1].DoCombat(justice, shoggoth);
+        this.turn++;
+    }
+
+    public void Reversal()
+    {
+        justice.skills[2].DoCombat(justice, shoggoth);
+        this.turn++;
     }
 
 }

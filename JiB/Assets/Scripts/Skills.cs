@@ -18,7 +18,7 @@ public class Attack : Skills
         Desc = "The most basic of skills. Deal Damage equal to you Attack + random value range";
     }
 
-    override public void DoCombat(Creature owner, Creature target)
+    override public void DoCombat(Creature owner, Creature target = null)
     {
         target.TakeDamage(owner.Atk + ((int)Random.Range(1, 11)));
     }
@@ -28,11 +28,40 @@ public class ScalesOfJustice : Skills
     public ScalesOfJustice()
     {
         Name = "Scales of Justice";
-        Desc = "Balance the scales of Fate by Healing yourself for 20 HP";
+        Desc = "Balance the scales of Fate by Healing yourself for 40 HP";
     }
 
-    override public void DoCombat(Creature owner, Creature target)
+    override public void DoCombat(Creature owner, Creature target = null)
     {
-       target.Heal(20);
+       owner.Heal(40);
+    }
+}
+
+public class ReversalJustice : Skills
+{
+    public ReversalJustice()
+    {
+        Name = "Reversal";
+        Desc = "Sacrifice Defense for Massive Attack Boost, or Return to Normal";
+    }
+
+    public override void DoCombat(Creature owner, Creature target = null)
+    {
+        if (owner.form == Creature.Form.upright)
+        {
+            owner.form = Creature.Form.reveral;
+
+            owner.Dfn = -5;
+
+            owner.Atk = 40;
+        }
+        else
+        {
+            owner.form = Creature.Form.reveral;
+
+            owner.Dfn = 10;
+
+            owner.Atk = 10;
+        }
     }
 }

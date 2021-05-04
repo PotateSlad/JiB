@@ -5,7 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Creature : MonoBehaviour
 {
+
+    public enum Form
+    {
+        normal,
+        upright,
+        reveral
+    }
     public string Name;
+
+    public Form form;
 
     public int maxHP;
     public int HP { get; set; }
@@ -33,7 +42,7 @@ public class Creature : MonoBehaviour
         HP = System.Math.Max(HP, 0);
         Debug.Log("Took " + realDamage+" Damage");
         Debug.Log(this.Name + " HP: " + this.HP);
-        //if (HP <= 0) Die();
+        if (HP <= 0) Die();
     }
 
 

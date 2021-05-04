@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creature: {fileID: 0}
+  percentile: 0
 --- !u!1 &43541360
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  form: 0
   maxHP: 0
 --- !u!222 &78492466
 CanvasRenderer:
@@ -952,7 +954,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 662608397}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 764539982}
+        m_TargetAssemblyTypeName: ScriptedBattle, Assembly-CSharp
+        m_MethodName: Reversal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &662608397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,7 +1136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a480e5eef8e4b404898a58a06779c1be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthbar: {fileID: 1257624911}
+  turn: 0
 --- !u!1 &790086876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,6 +1444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creature: {fileID: 0}
+  percentile: 0
 --- !u!1 &1267843563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  form: 0
   maxHP: 0
 --- !u!1 &1511813410
 GameObject:
@@ -1708,7 +1724,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1546626070}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 764539982}
+        m_TargetAssemblyTypeName: ScriptedBattle, Assembly-CSharp
+        m_MethodName: Skill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1546626070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2321,7 +2349,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2146165086}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 764539982}
+        m_TargetAssemblyTypeName: ScriptedBattle, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2146165086
 MonoBehaviour:
   m_ObjectHideFlags: 0
