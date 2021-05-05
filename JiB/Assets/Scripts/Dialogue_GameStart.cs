@@ -14,7 +14,7 @@ public class Dialogue_GameStart : MonoBehaviour
     void Start()
     {
         txt = this.gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<UnityEngine.UI.Text>();
-        start = new DialogueNode("Hello world!", txt, false);
+        start = new DialogueNode("........", txt, false);
         start.addNext(new DialogueNode("This is the second node", txt, false));
 
         curNode = start;
