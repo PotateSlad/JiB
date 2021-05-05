@@ -17,8 +17,8 @@ public static class Game
     private static int[] characterExps = new int[21];
     //inventory: index = item type (see enum), data at index = item quantity
     private static int[] inventory = new int[2];
-    //map unlock vars, a sort of pseudo progress switch for us (see enum for order as well)
-    private static bool[] mapUnlocked = new bool[41];
+    //map unlock vars, a sort of progress switch for us (see enum for order as well)
+    private static int[] mapStatus = new int[41];
     private static int currentRoom;
 
     //public for our convenience!
@@ -102,6 +102,16 @@ public static class Game
         Dovecotes,      //39
         Gatehouse       //40
     }
+    public enum MapStatus
+    {
+        Locked,             //0
+        Unvisited_Red,      //1
+        Unvisited_Yellow,   //2
+        Unvisited_Green,    //3
+        Visited_Red,        //4
+        Visited_Yellow,     //5
+        Visited_Green       //6
+    }
 
     //game logic initialization for a new game
     public static void gameInit()
@@ -130,12 +140,12 @@ public static class Game
         }
 
         //lock all areas of the map
-        for (int i = 0; i < mapUnlocked.Length; i++)
+        for (int i = 0; i < mapStatus.Length; i++)
         {
-            mapUnlocked[i] = false;
+            mapStatus[i] = (int)MapStatus.Locked;
         }
         //unlock the dovecotes (starting zone)...
-        mapUnlocked[(int)MapIDs.Dovecotes] = true;
+        mapStatus[(int)MapIDs.Dovecotes] = (int)MapStatus.Unvisited_Green;
         //set current room to the dovecotes
         currentRoom = (int)MapIDs.Dovecotes;
     }
