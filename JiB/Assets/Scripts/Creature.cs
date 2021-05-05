@@ -55,4 +55,44 @@ public class Creature : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    //Referenced from https://www.youtube.com/watch?v=XOjd_qU2Ido
+    public void SaveCreature()
+    {
+        SaveSystem.SaveValues(this);
+    }
+    public void LoadCreature()
+    {
+        CreatureData data = SaveSystem.LoadValues();
+
+        Name = data.Name;
+        if(data.form.Equals("normal"))
+            form = Form.normal;
+        else if(data.form.Equals("upright"))
+            form = Form.upright;
+        else 
+            form = Form.reveral;
+
+        maxHP = data.maxHP;
+        HP = data.HP;
+        Dfn = data.Dfn;
+        Atk = data.Atk;
+        
+        for(int i=0; i<data.skill_count; i++)
+        {
+            if(data.skills[i] == "Attack")
+            {
+                skills.Add(new Attack());
+            }
+            else if(data.skills[i] == "Scales of Justice")
+            {
+                skills.Add(new ScalesOfJustice());
+            }
+            else if(data.skills[i] == "Reversal")
+            {
+                skills.Add(new ReversalJustice());
+            }
+        }
+    }
+    //End Reference
 }
