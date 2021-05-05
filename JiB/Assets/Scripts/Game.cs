@@ -11,15 +11,15 @@ public static class Game
     //NICK-- these are the things that need saved :)
     //arcana vars: in order of arcana, for ease of access
     //justice is required, so only 3 others...
-    private static int[] partyMembers = new int[3];
-    private static bool[] charactersUnlocked = new bool[21];
-    private static int[] characterLvls = new int[21];
-    private static int[] characterExps = new int[21];
+    public static int[] partyMembers = new int[3];
+    public static bool[] charactersUnlocked = new bool[21];
+    public static int[] characterLvls = new int[21];
+    public static int[] characterExps = new int[21];
     //inventory: index = item type (see enum), data at index = item quantity
-    private static int[] inventory = new int[2];
+    public static int[] inventory = new int[2];
     //map unlock vars, a sort of progress switch for us (see enum for order as well)
-    private static int[] mapStatus = new int[41];
-    private static int currentRoom;
+    public static int[] mapStatus = new int[41];
+    public static int currentRoom;
 
     //public for our convenience!
     public enum Tarot
@@ -174,6 +174,14 @@ public static class Game
 
     public static void removePartyMember(int placement)
     {
-        //TODO
+        if (placement > 3 || party[placement] == null)
+        {
+            //can't do anything here
+            return;
+        }
+        //otherwise, update the Arcana's vars and remove from party
+        Arcana cur = party[placement];
+        characterLvls[cur.getId()] = cur.getLevel();
+        characterExps[cur.getId()] = cur.getExp();
     }
 }

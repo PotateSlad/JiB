@@ -73,4 +73,17 @@ public class Arcana
     {
         updateStats(l);
     }
+
+    public int getId()
+    {
+        return id;
+    }
+    public int getLevel()
+    {
+        return level;
+    }
+    public int getExp()
+    {
+        return exp;
+    }
 }

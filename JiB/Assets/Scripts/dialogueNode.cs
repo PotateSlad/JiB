@@ -21,7 +21,8 @@ public class DialogueNode
         this.next = new List<DialogueNode>();
         proceedable = false;
         character = 0;
-        txtbox.gameObject.transform.localPosition = new Vector3(-355, -105, 0);
+        txtbox.gameObject.transform.localPosition = new Vector3(-1400, -350, 0);
+        txtbox.fontSize = 300;
         hasButtons = buttons;
         this.speaker = null;
     }

@@ -13,7 +13,7 @@ public class Dialogue_GameStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        txt = this.gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<UnityEngine.UI.Text>();
+        txt = this.gameObject.transform.GetChild(0).GetChild(0).GetChild(0).gameObject.GetComponent<UnityEngine.UI.Text>();
         start = new DialogueNode("........", txt, false);
         start.addNext(new DialogueNode("This is the second node", txt, false));
 
