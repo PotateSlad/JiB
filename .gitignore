@@ -54,6 +54,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+JiB/UserSettings/EditorUserSettings.asset
 
 # Crashlytics generated file
 crashlytics-build.properties
