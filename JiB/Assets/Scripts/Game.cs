@@ -150,11 +150,40 @@ public static class Game
         currentRoom = (int)MapIDs.Dovecotes;
     }
 
+    //Referenced from https://www.youtube.com/watch?v=XOjd_qU2Ido
+    public static void gameSave()
+    {
+        SaveSystem.SaveGameValues();
+    }
+
     //similar to gameInit, but now we're loading in info from a save file
     public static void gameLoad()
     {
         //TODO
+        GameData data = SaveSystem.LoadGameValues();
+
+        Game.partyMembers[0] = data.partyMembers[0];
+        Game.partyMembers[1] = data.partyMembers[1];
+        Game.partyMembers[2] = data.partyMembers[2];
+
+        for(int a=0; a<21; a++)
+        {
+            Game.charactersUnlocked[a] = data.charactersUnlocked[a];
+            Game.characterLvls[a] = data.characterLvls[a];
+            Game.characterExps[a] = data.characterExps[a];
+        }
+
+        Game.inventory[0] = data.inventory[0];
+        Game.inventory[1] = data.inventory[1];
+        Game.inventory[2] = data.inventory[2];
+            
+        for(int b=0; b<41; b++)
+        {
+            Game.mapStatus[b] = data.mapStatus[b];
+        }
+        Game.currentRoom = data.currentRoom;
     }
+    //End reference
 
     //sets up the Arcana variable for adding a party member
     public static void addPartyMember(int id, int placement)

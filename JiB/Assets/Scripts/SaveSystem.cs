@@ -17,6 +17,18 @@ public static class SaveSystem
         stream.Close();
     }
 
+    public static void SaveGameValues()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/savedData.game.coms437";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        GameData data = new GameData();
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
     public static CreatureData LoadValues()
     {
         string path = Application.persistentDataPath + "/savedData.coms437";
@@ -29,6 +41,26 @@ public static class SaveSystem
             stream.Close();
 
             return data;
+        }
+        else
+        {
+            Debug.LogError("Save file not found in " + path);
+            return null;
+        }
+    }
+
+    public static GameData LoadGameValues()
+    {
+        string path = Application.persistentDataPath + "/savedData.game.coms437";
+        if(File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            GameData data = formatter.Deserialize(stream) as GameData;
+            stream.Close();
+
+           return data;
         }
         else
         {
