@@ -159,7 +159,6 @@ public static class Game
     //similar to gameInit, but now we're loading in info from a save file
     public static void gameLoad()
     {
-        //TODO
         GameData data = SaveSystem.LoadGameValues();
 
         Game.partyMembers[0] = data.partyMembers[0];
@@ -212,5 +211,6 @@ public static class Game
         Arcana cur = party[placement];
         characterLvls[cur.getId()] = cur.getLevel();
         characterExps[cur.getId()] = cur.getExp();
+        party[placement] = null;
     }
 }
