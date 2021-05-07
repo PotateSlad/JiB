@@ -84,23 +84,23 @@ public static class Game
         Place_of_Arms,  //21
         Storeroom,      //22
         Cellar,         //23
-        Store_Closet,   //24
+        Cabinet,        //24
         Kitchen,        //25
         Buttery,        //26
         Pantry,         //27
         Kitchen_Hall,   //28
         Screens,        //29
         Porch,          //30
-        NW_Tower,       //31
-        NE_Tower,       //32
-        SW_Tower,       //33
-        SE_Tower,       //34
+        Armory,         //31
+        Musee,          //32
+        West_Watchtower,//33
+        East_Watchtower,//34
         Forge,          //35
         Bowyer,         //36
         Ice_House,      //37
         Hermit_Hovel,   //38
         Dovecotes,      //39
-        Gatehouse       //40
+        Guardhouse      //40
     }
     public enum MapStatus
     {
