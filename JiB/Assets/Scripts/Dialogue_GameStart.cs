@@ -37,18 +37,33 @@ public class Dialogue_GameStart : Dialogue_Manager
         SpeakerRight = GameObject.Find("SpeakerRight");
 
         start = new ClickNode("......................", txt);
-        ButtonNode second = new ButtonNode("Coo... Coo...", txt, new GameObject[]{ Button1, Button2 }, new Text[] { ButtonBox1, ButtonBox2 });
-        ClickNode second_decision1 = new ClickNode("So it's true!", txt);
-        ClickNode second_decision2 = new ClickNode("Oh, that's too bad...", txt);
+        ButtonNode n_2 = new ButtonNode("Coo...   Coo...", txt, new GameObject[]{ Button1, Button2 }, new Text[] { ButtonBox1, ButtonBox2 });
+        start.setNext(n_2);
 
-        start.setNext(second);
+        //branch 2_1
+        ClickNode n_2_1 = new ClickNode("Justice! You're awake!", txt);
+        n_2.addNext(n_2_1, "What the hell is that?");
+        ClickNode n_2_1_b = new ClickNode("Strength?\n\nWhat the hell is all that cooing?", txt);
+        n_2_1.setNext(n_2_1_b);
+        ClickNode n_2_1_1 = new ClickNode("That?... \n\nOh, it's the doves!", txt);
+        n_2_1_b.setNext(n_2_1_1);
+        ClickNode n_2_1_2 = new ClickNode("You know, the doves that live in the dovecotes.", txt);
+        n_2_1_1.setNext(n_2_1_2);
 
-        second.addNext(second_decision1, "Yes");
-        second.addNext(second_decision2, "No");
+        //branch 2_2
+        ClickNode n_2_2 = new ClickNode("Justice! You're awake!", txt);
+        n_2.addNext(n_2_2, "Where the hell am I?");
+        ClickNode n_2_2_b = new ClickNode("Strength, where the hell am I.", txt);
+        n_2_2.setNext(n_2_2_b);
+        ClickNode n_2_2_1 = new ClickNode("Wha?... \n\nOh, you're in the dovecotes, silly!", txt);
+        n_2_2.setNext(n_2_2_1);
 
-        second_decision1.setNext(start);
+        //branch together
+        ClickNode n_3 = new ClickNode("I brought you here after, oh geez, where do I start?\nWell, we were all just in the Great Hall for the Monday meeting, and Tower had just gone up to the dias to read off some requests, then WHOOOOSH and a HUGE scary-looking portal ripped open ", txt);
+        n_2_1_2.setNext(n_3);
+        n_2_2_1.setNext(n_3);
 
-        second_decision2.setNext(start);
+        n_3.setNext(start);
         
         Button4.SetActive(false);
         Button1.SetActive(false);

@@ -40,7 +40,7 @@ public class ButtonNode : DialogueNode
     //use default draw
     public override void Draw()
     {
-        if (character == 0)
+        if (proceedable)
         {
             //activate the buttons and set their text!
             for (int i = 0; i < buttons.Length; i++)
