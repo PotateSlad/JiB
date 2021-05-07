@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 6d9d4e8a1db4946d0a0f5c8c4e27256a
   - enabled: 1
-    path: Assets/Scenes/Castle_GameStart.unity
-    guid: 882316cd320bd48c0b8f410b1e5e04be
-  - enabled: 1
     path: Assets/Scenes/Battle.unity
     guid: b638689b7d931432c8af34f2f294b954
   - enabled: 1
