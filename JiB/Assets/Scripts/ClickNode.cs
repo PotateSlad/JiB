@@ -5,17 +5,15 @@ using UnityEngine.UI;
 
 public class ClickNode : DialogueNode
 {
-    //some positions for text
-    //text in the textbox, no character images OR image on the left
-    private static Vector3 boxLeftPosition = new Vector3(-1400, -350, 0);
-    //character image on the left
-    private static Vector3 boxRightPosition = new Vector3(-300, -105, 0);
-
-    //in base--
+    //shared in base--
     /*char[] message;
     Text txtbox;
     int character;
-    bool proceedable;*/
+    bool proceedable;
+    protected GameObject speaker;
+    protected Sprite speakerSprite;
+    protected Sprite speakerShadow;
+    protected bool speakerLeft;*/
 
     DialogueNode next;
 
@@ -44,8 +42,7 @@ public class ClickNode : DialogueNode
         {
             //any click will work for a clicknode!
             //reset this node
-            character = 0;
-            proceedable = false;
+            base.resetNode();
             return next;
         }
         return this;

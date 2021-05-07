@@ -46,8 +46,10 @@ public class Dialogue_GameStart : Dialogue_Manager
         ClickNode n_2_1_b = new ClickNode("Strength?\n\nWhat the hell is all that cooing?", txt);
         n_2_1.setNext(n_2_1_b);
         ClickNode n_2_1_1 = new ClickNode("That?... \n\nOh, it's the doves!", txt);
+        n_2_1_1.addSpeaker(SpeakerRight, "Images/Justice_annoyed", "Images/Justice_annoyed_shadow", false);
         n_2_1_b.setNext(n_2_1_1);
         ClickNode n_2_1_2 = new ClickNode("You know, the doves that live in the dovecotes.", txt);
+        n_2_1_2.addSpeaker(SpeakerRight, "Images/Justice_annoyed", "Images/Justice_annoyed_shadow", false);
         n_2_1_1.setNext(n_2_1_2);
 
         //branch 2_2
@@ -56,10 +58,12 @@ public class Dialogue_GameStart : Dialogue_Manager
         ClickNode n_2_2_b = new ClickNode("Strength, where the hell am I.", txt);
         n_2_2.setNext(n_2_2_b);
         ClickNode n_2_2_1 = new ClickNode("Wha?... \n\nOh, you're in the dovecotes, silly!", txt);
+        n_2_2_1.addSpeaker(SpeakerRight, "Images/Justice_annoyed", "Images/Justice_annoyed_shadow", false);
         n_2_2.setNext(n_2_2_1);
 
         //branch together
         ClickNode n_3 = new ClickNode("I brought you here after, oh geez, where do I start?\nWell, we were all just in the Great Hall for the Monday meeting, and Tower had just gone up to the dias to read off some requests, then WHOOOOSH and a HUGE scary-looking portal ripped open ", txt);
+        n_3.addSpeaker(SpeakerRight, "Images/Justice_annoyed", "Images/Justice_annoyed_shadow", false);
         n_2_1_2.setNext(n_3);
         n_2_2_1.setNext(n_3);
 

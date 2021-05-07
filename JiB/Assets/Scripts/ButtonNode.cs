@@ -5,13 +5,7 @@ using UnityEngine.UI;
 
 public class ButtonNode : DialogueNode
 {
-    //some positions for text
-    //text in the textbox, no character images OR image on the left
-    private static Vector3 boxLeftPosition = new Vector3(-1400, -350, 0);
-    //character image on the left
-    private static Vector3 boxRightPosition = new Vector3(-300, -105, 0);
-
-    //in base--
+    //shared in base--
     /*char[] message;
     Text txtbox;
     int character;
@@ -69,8 +63,7 @@ public class ButtonNode : DialogueNode
         {
             //any click will work for a clicknode!
             //reset this node
-            character = 0;
-            proceedable = false;
+            base.resetNode();
             for (int i = 0; i < buttons.Length; i++)
             {
                 //buttons[i];
