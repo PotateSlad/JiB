@@ -23,7 +23,7 @@ public abstract class DialogueNode
     protected GameObject speaker;
     protected Sprite speakerSprite;
     protected bool speakerLeft;
-    protected bool menuable;
+    protected int menuable;
 
     //adds one more character to the current dialogue box
     public virtual void Draw()
@@ -102,11 +102,12 @@ public abstract class DialogueNode
         proceedOnScroll = b;
     }
 
-    public void enableMenu()
+    //-1 turn off, 0 no change, 1 turn on
+    public void enableMenu(int i)
     {
-        menuable = true;
+        menuable = i;
     }
-    public bool showMenu()
+    public int showMenu()
     {
         return menuable;
     }

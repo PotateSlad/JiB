@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MapRoom : MonoBehaviour
 {
     public bool hideOnLocked;
+    public int roomID;
     private bool isLocked = false;
     SpriteRenderer sr;
 
@@ -64,6 +66,14 @@ public class MapRoom : MonoBehaviour
         if (!isLocked)
         {
             sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, sr.color.a - (40 / 255f));
+        }
+    }
+
+    private void OnMouseUp()
+    {
+        if (!isLocked)
+        {
+            SceneManager.LoadScene(roomID);
         }
     }
 

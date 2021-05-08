@@ -23,6 +23,7 @@ public class ButtonNode : DialogueNode
         message = msg.ToCharArray();
         character = 0;
         proceedable = false;
+        menuable = 0;
 
         buttons = b;
         next = new DialogueNode[b.Length];
@@ -61,6 +62,10 @@ public class ButtonNode : DialogueNode
     {
         if (proceedable && clickData > -1 && clickData < 4)
         {
+            if (next.Length == 0)
+            {
+                return this;
+            }
             //any click will work for a clicknode!
             //reset this node
             base.resetNode();

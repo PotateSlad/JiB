@@ -21,6 +21,7 @@ public class Dialogue_Dovecotes : Dialogue_Manager
     Text ButtonBox3;
     GameObject SpeakerLeft;
     GameObject SpeakerRight;
+    GameObject UI;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,8 @@ public class Dialogue_Dovecotes : Dialogue_Manager
         {
             Game.gameInit();
         }
+        Game.currentRoom = (int)Game.MapIDs.Dovecotes;
+        Game.mapStatus[(int)Game.MapIDs.Magician_Tower] = (int)Game.MapStatus.Unvisited_Red;
 
         txt = this.gameObject.transform.GetChild(0).GetChild(0).GetChild(0).gameObject.GetComponent<UnityEngine.UI.Text>();
         Button4 = GameObject.Find("Button4");
@@ -41,6 +44,7 @@ public class Dialogue_Dovecotes : Dialogue_Manager
         ButtonBox3 = this.gameObject.transform.GetChild(0).GetChild(0).GetChild(3).gameObject.GetComponent<UnityEngine.UI.Text>();
         SpeakerLeft = GameObject.Find("SpeakerLeft");
         SpeakerRight = GameObject.Find("SpeakerRight");
+        UI = GameObject.Find("UI");
 
         if (Game.mapStatus[(int)Game.MapIDs.Dovecotes] == (int)Game.MapStatus.Unvisited_Green)
         {
@@ -217,7 +221,11 @@ public class Dialogue_Dovecotes : Dialogue_Manager
             n_7_a3.setNext(n_8);
             n_7_b2.setNext(n_8);
 
-            ClickNode n_9 = new ClickNode("", txt);
+            ClickNode n_9 = new ClickNode("If we're going to get into the castle, the Magician's Tower is your " +
+                "safest bet. It's way in the back, and there's an outside door just north of here.", txt);
+            n_9.addSpeaker(SpeakerRight, "Images/strength_neutral", false);
+            n_9.enableMenu(1);
+            n_8.setNext(n_9);
 
             curNode = n_1;
         }
@@ -239,16 +247,19 @@ public class Dialogue_Dovecotes : Dialogue_Manager
         ButtonBox3.gameObject.SetActive(false);
         SpeakerLeft.SetActive(false);
         SpeakerRight.SetActive(false);
-
-        
+        UI.SetActive(false);
     }
 
     //FixedUpdate is called on a regular time interval
     private void FixedUpdate()
     {
-        if (curNode.showMenu() == true)
+        if (curNode.showMenu() == 1)
         {
-
+            UI.SetActive(true);
+        }
+        else if (curNode.showMenu() == -1)
+        {
+            UI.SetActive(false);
         }
         if (counter == speed)
         {

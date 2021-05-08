@@ -25,6 +25,7 @@ public class ClickNode : DialogueNode
         message = msg.ToCharArray();
         character = 0;
         proceedable = false;
+        menuable = 0;
     }
 
     //use default draw
@@ -42,6 +43,10 @@ public class ClickNode : DialogueNode
     {
         if (proceedable)
         {
+            if (next == null)
+            {
+                return this;
+            }
             //any click will work for a clicknode!
             //reset this node
             base.resetNode();

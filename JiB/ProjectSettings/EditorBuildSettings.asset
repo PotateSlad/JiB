@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Castle_Dovecotes.unity
     guid: 908f61c52a6ae264e9b95379573a5d59
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: 07a47ba564cb396419f5d47d263e81ba
+  - enabled: 1
+    path: Assets/Scenes/Castle_MageTower.unity
+    guid: 8a1ae5e1f6fb4e944b6bdb2032a4ebdb
   m_configObjects: {}

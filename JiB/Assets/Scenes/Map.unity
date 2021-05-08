@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &5308248
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -899,6 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &124652632
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1129,6 +1131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &132720618
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1304,6 +1307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &147766143
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1447,6 +1451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &156982440
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1753,6 +1758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &287773096
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1915,6 +1921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &314214062
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2373,6 +2380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 1
+  roomID: 0
 --- !u!60 &385365044
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2509,6 +2517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &401001167
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2650,6 +2659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &408997070
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2799,6 +2809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &442569642
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2938,6 +2949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &446741105
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3112,6 +3124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 6
 --- !u!60 &494850273
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3281,6 +3294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &587601143
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3509,6 +3523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &707387336
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4011,6 +4026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &773890872
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4182,6 +4198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &778711686
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4410,6 +4427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &860442670
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4634,6 +4652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &971532539
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4801,6 +4820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &972582035
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4959,6 +4979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1022825613
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5184,6 +5205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1065396810
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5322,6 +5344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1067013539
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5614,6 +5637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1115334785
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5769,6 +5793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 4
 --- !u!60 &1163125867
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5926,6 +5951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1167192932
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6065,6 +6091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1172176973
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6223,6 +6250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1232591902
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6473,6 +6501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1251338411
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6787,6 +6816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1263549259
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7201,6 +7231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1350819077
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7583,6 +7614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1543330337
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7835,6 +7867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1562957041
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8087,6 +8120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1578307013
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8223,6 +8257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 1
+  roomID: 0
 --- !u!60 &1617518763
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8362,6 +8397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1625171563
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8981,6 +9017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 1
+  roomID: 0
 --- !u!60 &1774339008
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9789,6 +9826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1963061017
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9958,6 +9996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &1989598025
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10183,6 +10222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &2036506630
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10482,6 +10522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnLocked: 0
+  roomID: 0
 --- !u!60 &2133168110
 PolygonCollider2D:
   m_ObjectHideFlags: 0
