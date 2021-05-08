@@ -7,17 +7,21 @@ public abstract class DialogueNode
 {
     //some positions for text
     //text in the textbox, no character images OR image on the left
-    private static Vector3 boxLeftPosition = new Vector3(-1400, -350, 0);
+    private static Vector3 boxCenterPosition = new Vector3(0, -350, 0);
+    private static float boxCenterScale = 11400f;
+    private static Vector3 boxLeftPosition = new Vector3(-600, -350, 0);
+    private static float boxLeftScale = 6400f;
     //character image on the left
-    private static Vector3 boxRightPosition = new Vector3(-500, -350, 0);
+    private static Vector3 boxRightPosition = new Vector3(500, -350, 0);
+    private static float boxRightScale = 7400f;
 
     protected char[] message;
     protected Text txtbox;
     protected int character;
     protected bool proceedable;
+    protected bool proceedOnScroll = false;
     protected GameObject speaker;
     protected Sprite speakerSprite;
-    protected Sprite speakerShadow;
     protected bool speakerLeft;
 
     //adds one more character to the current dialogue box
@@ -29,11 +33,21 @@ public abstract class DialogueNode
             {
                 speaker.SetActive(true);
                 speaker.GetComponent<SpriteRenderer>().sprite = speakerSprite;
-                speaker.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = speakerShadow;
                 if (speakerLeft)
                 {
                     txtbox.transform.localPosition = boxRightPosition;
+                    txtbox.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, boxRightScale);
                 }
+                else
+                {
+                    txtbox.transform.localPosition = boxLeftPosition;
+                    txtbox.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, boxLeftScale);
+                }
+            }
+            else
+            {
+                txtbox.transform.localPosition = boxCenterPosition;
+                txtbox.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, boxCenterScale);
             }
             txtbox.text = message[0].ToString();
         }
@@ -50,13 +64,23 @@ public abstract class DialogueNode
             proceedable = true;
         }
 
+        //scroll if more than 4 lines are up
+        if (txtbox.cachedTextGenerator.lineCount > 4)
+        {
+            int i = txtbox.cachedTextGenerator.lines[1].startCharIdx;
+            txtbox.text = txtbox.text.Substring(i);
+            if (proceedOnScroll)
+            {
+                proceedable = true;
+            }
+        }
+
     }
 
-    public void addSpeaker(GameObject s, string p, string sh, bool isLeft)
+    public void addSpeaker(GameObject s, string p, bool isLeft)
     {
         speaker = s;
         speakerSprite = Resources.Load(p, typeof(Sprite)) as Sprite;
-        speakerShadow = Resources.Load(sh, typeof(Sprite)) as Sprite;
         speakerLeft = isLeft;
     }
 
@@ -67,13 +91,13 @@ public abstract class DialogueNode
         if (speaker != null)
         {
             speaker.SetActive(false);
-            if (speakerLeft)
-            {
-                txtbox.transform.localPosition = boxLeftPosition;
-            }
         }
     }
 
     public abstract DialogueNode requestNext(int clickData);
 
+    public void setProceedableOnScroll(bool b)
+    {
+        proceedOnScroll = b;
+    }
 }

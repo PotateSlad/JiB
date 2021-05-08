@@ -13,9 +13,11 @@ public class ClickNode : DialogueNode
     protected GameObject speaker;
     protected Sprite speakerSprite;
     protected Sprite speakerShadow;
-    protected bool speakerLeft;*/
+    protected bool speakerLeft;
+    bool automatic;*/
 
     DialogueNode next;
+    
 
     public ClickNode(string msg, Text txt)
     {
@@ -47,4 +49,6 @@ public class ClickNode : DialogueNode
         }
         return this;
     }
+
+    
 }

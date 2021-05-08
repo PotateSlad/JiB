@@ -1014,8 +1014,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba443851391246b3b8a13ebdfe42e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contentString: Sacrifice Defense for Massive Attack Boost, or Return to Normal
-  headerString: Reversal
 --- !u!1 &669580298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,7 +2253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ae64319093e4034bfdb77914ea186d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltip: {fileID: 1914588593}
 --- !u!1 &1511813410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,8 +2535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba443851391246b3b8a13ebdfe42e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contentString: Balance the scales of Fate by Healing yourself for 40 HP
-  headerString: Scales of Justice
 --- !u!1 &1583769220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2732,7 +2727,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 991aa4cd43e4f034ca3e597cb35e6b4c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b51dbf2796796b84dbec5960e05829ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3014,7 +3009,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: de5aed66bceea424880dedb01149f2e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c17db5c46b7328478bab03c3f3fd020, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3185,10 +3180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f1f2a0de6ff473ea01c258b76d8cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: {fileID: 669580300}
-  content: {fileID: 680586223}
-  layoutElement: {fileID: 1914588590}
-  wrapLimit: 0
 --- !u!1 &2146165083
 GameObject:
   m_ObjectHideFlags: 0
@@ -3336,6 +3327,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba443851391246b3b8a13ebdfe42e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contentString: The most basic of skills. Deal Damage equal to you Attack + random
-    value range
-  headerString: Attack
