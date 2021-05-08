@@ -6,6 +6,7 @@ public static class Game
 {
     //party variables
     private static Arcana[] party = new Arcana[3];
+    public static bool gameIsInit = false;
 
     //game switches
     //NICK-- these are the things that need saved :)
@@ -148,6 +149,8 @@ public static class Game
         mapStatus[(int)MapIDs.Dovecotes] = (int)MapStatus.Unvisited_Green;
         //set current room to the dovecotes
         currentRoom = (int)MapIDs.Dovecotes;
+
+        gameIsInit = true;
     }
 
     //Referenced from https://www.youtube.com/watch?v=XOjd_qU2Ido
@@ -181,6 +184,8 @@ public static class Game
             Game.mapStatus[b] = data.mapStatus[b];
         }
         Game.currentRoom = data.currentRoom;
+
+        gameIsInit = true;
     }
     //End reference
 

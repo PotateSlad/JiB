@@ -88,7 +88,8 @@ public class Dialogue_GameStart : Dialogue_Manager
         n_2_2_1.setNext(n_3);
         n_2_1_2.setNext(n_3);
 
-        n_3.addNext(start, "Strength...");
+        TransferNode n_4 = new TransferNode(4);
+        n_3.addNext(n_4, "Strength...");
         
         Button4.SetActive(false);
         Button1.SetActive(false);

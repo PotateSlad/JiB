@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Castle_GameStart.unity
     guid: 7fedee916482c4b199b65bc47da58b81
+  - enabled: 1
+    path: Assets/Scenes/Castle_Dovecotes.unity
+    guid: 908f61c52a6ae264e9b95379573a5d59
   m_configObjects: {}

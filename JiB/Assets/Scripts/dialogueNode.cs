@@ -12,8 +12,8 @@ public abstract class DialogueNode
     private static Vector3 boxLeftPosition = new Vector3(-600, -350, 0);
     private static float boxLeftScale = 6400f;
     //character image on the left
-    private static Vector3 boxRightPosition = new Vector3(500, -350, 0);
-    private static float boxRightScale = 7400f;
+    private static Vector3 boxRightPosition = new Vector3(430, -350, 0);
+    private static float boxRightScale = 7800f;
 
     protected char[] message;
     protected Text txtbox;
@@ -23,6 +23,7 @@ public abstract class DialogueNode
     protected GameObject speaker;
     protected Sprite speakerSprite;
     protected bool speakerLeft;
+    protected bool menuable;
 
     //adds one more character to the current dialogue box
     public virtual void Draw()
@@ -99,5 +100,14 @@ public abstract class DialogueNode
     public void setProceedableOnScroll(bool b)
     {
         proceedOnScroll = b;
+    }
+
+    public void enableMenu()
+    {
+        menuable = true;
+    }
+    public bool showMenu()
+    {
+        return menuable;
     }
 }
