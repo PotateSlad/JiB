@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScriptedBattle : MonoBehaviour
+/*public class ScriptedBattle : MonoBehaviour
 {
     Justice justice;
 
@@ -47,4 +47,4 @@ public class ScriptedBattle : MonoBehaviour
         this.turn++;
     }
 
-}
+}*/

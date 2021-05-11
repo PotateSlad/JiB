@@ -5,8 +5,11 @@ using UnityEngine;
 public static class Game
 {
     //party variables
-    private static Arcana[] party = new Arcana[3];
+    public static Arcana[] party = new Arcana[3];
+    public static int partySize = 0;
     public static bool gameIsInit = false;
+    public static Monster[] enemies = new Monster[1];
+    public static int numMonsters = 1;
 
     //game switches
     //NICK-- these are the things that need saved :)
@@ -150,6 +153,11 @@ public static class Game
         //set current room to the dovecotes
         currentRoom = (int)MapIDs.Dovecotes;
 
+        //FOR TESTING
+        enemies[0] = new Shoggoth();
+        //add Justice to the party
+        addPartyMember((int)Tarot.Justice, 0);
+
         gameIsInit = true;
     }
 
@@ -198,11 +206,12 @@ public static class Game
             return;
         }
         //otherwise, we can init an Arcana based on their id and known level and exp
-        Arcana toAdd = new Arcana(id);
+        Arcana toAdd = loadFromId(id);
         toAdd.setLevel(characterLvls[id]);
         toAdd.setExp(characterExps[id]);
 
         party[placement] = toAdd;
+        partySize++;
     }
 
     public static void removePartyMember(int placement)
@@ -217,5 +226,13 @@ public static class Game
         characterLvls[cur.getId()] = cur.getLevel();
         characterExps[cur.getId()] = cur.getExp();
         party[placement] = null;
+        partySize--;
+    }
+
+    //selects the correct arcana from the Arcana subclasses...
+    public static Arcana loadFromId(int id)
+    {
+        //PLACEHOLDER
+        return new Justice();
     }
 }
