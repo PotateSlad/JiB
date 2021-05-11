@@ -16,7 +16,14 @@ public class TransferNode : DialogueNode
 
     public override void Draw()
     {
-        SceneManager.LoadScene(id);
+        if (id == -1)
+        {
+            Application.Quit();
+        }
+        else
+        {
+            SceneManager.LoadScene(id);
+        }
     }
 
     public override DialogueNode requestNext(int clickData)

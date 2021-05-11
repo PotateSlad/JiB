@@ -66,6 +66,15 @@ public class Dialogue_Magician : Dialogue_Manager
         {
             ClickNode n_1 = new ClickNode("Congratulations, you beat the monster!", txt);
 
+            ClickNode n_2 = new ClickNode("That's all for this demo, but stay tuned for more!", txt);
+            n_1.setNext(n_2);
+
+            ClickNode n_3 = new ClickNode("Thanks for playing!", txt);
+            n_2.setNext(n_3);
+
+            TransferNode n_4 = new TransferNode(-1);
+            n_3.setNext(n_4);
+
             curNode = n_1;
         }
 
